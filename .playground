@@ -1,6 +1,6 @@
 {
-  "template_name": "Try Google App Engine for Python, Django",
-  "template_description": "Starter code for a Google App Engine app in Python using the Django framework.",
+  "project_name": "Hello World, Python with Django",
+  "project_description": "Starter code for a Google App Engine app in Python using the Django framework.",
   "show_files": [
     "templates/home.html",
     "app.yaml",
