@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: django-autoload
+Version: 0.01
+Summary: Ensures loading of specified app modules.
+Home-page: http://www.allbuttonspressed.com/
+Author: Thomas Wanschik
+Author-email: twanschik@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: BSD License

@@ -1,0 +1,69 @@
+# This file specifies your Python application's runtime configuration
+# including URL routing, versions, static file uploads, etc. See
+# https://developers.google.com/appengine/docs/python/config/appconfig
+# for details.
+
+# TODO: Enter your application id below. If you have signed up
+# using cloud.google.com/console use the "project id" for your application
+# id.
+application: your-application-id-here
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+# Builtins provide handlers for common application functions. See
+# https://developers.google.com/appengine/docs/python/config/appconfig#Python_app_yaml_Builtin_handlers
+# for a list of other builtins.
+# TODO: List any other builtins that you wish to use.
+builtins:
+- remote_api: on
+
+# Before an application can receive certain messages, the application must be
+# configured to enable the appropriate service. The 'warmup' service enables
+# warmup requests (see: https://developers.google.com/appengine/docs/adminconsole/instances#Warmup_Requests).
+# See https://developers.google.com/appengine/docs/python/config/appconfig#Python_app_yaml_Inbound_services
+# for a list of other inbound services.
+# TODO: List any other inbound services that you wish to use.
+inbound_services:
+- warmup
+
+# Third party libraries that are included in the App Engine SDK must be listed
+# here if you want to use them. See
+# https://developers.google.com/appengine/docs/python/tools/libraries27 for
+# a list of libraries included in the SDK. Third party libs that are *not* part
+# of the App Engine SDK don't need to be listed here, instead add them to your
+# project directory, either as a git submodule or as a plain subdirectory.
+# Note that dependencies must be located in your project directory - packages
+# installed in the Python environment are not loaded by the App Engine development
+# server or deployment tools.
+# TODO: List any other App Engine SDK libs you may need here.
+libraries:
+- name: django
+  version: latest
+
+# Handlers tell App Engine how to route requests to your application.
+handlers:
+
+# This handler routes requests sent via the deferred library.
+# See https://developers.google.com/appengine/articles/deferred
+- url: /_ah/queue/deferred
+  script: djangoappengine.deferred.handler.application
+  login: admin
+
+# This handler routes requests for application statistics.
+# See https://developers.google.com/appengine/docs/python/tools/appstats
+- url: /_ah/stats/.*
+  script: djangoappengine.appstats.application
+
+- url: /media/admin
+  static_dir: django/contrib/admin/media
+  expiration: '0'
+
+- url: /static/admin
+  static_dir: django/contrib/admin/static/admin
+  expiration: '0'
+
+# This handler catches all requests that don't match a previous handler.
+- url: /.*
+  script: djangoappengine.main.application

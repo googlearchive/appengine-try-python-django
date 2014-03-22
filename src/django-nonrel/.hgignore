@@ -1,0 +1,8 @@
+syntax:glob
+
+*.egg-info
+*.pot
+*.py[co]
+docs/_build/
+tests/coverage_html/
+tests/.coverage

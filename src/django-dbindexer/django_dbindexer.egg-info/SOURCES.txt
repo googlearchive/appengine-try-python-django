@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+dbindexer/__init__.py
+dbindexer/api.py
+dbindexer/backends.py
+dbindexer/base.py
+dbindexer/compiler.py
+dbindexer/lookups.py
+dbindexer/models.py
+dbindexer/resolver.py
+dbindexer/tests.py
+django_dbindexer.egg-info/PKG-INFO
+django_dbindexer.egg-info/SOURCES.txt
+django_dbindexer.egg-info/dependency_links.txt
+django_dbindexer.egg-info/top_level.txt
