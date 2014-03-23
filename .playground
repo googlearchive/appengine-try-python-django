@@ -4,8 +4,8 @@
   "show_files": [
     "hello/views.py",
     "app.yaml",
-    "myproject/settings.py"
-    "myproject/urls.py"
+    "myproject/settings.py",
+    "myproject/urls.py",
     "myproject/wsgi.py"
   ],
   "read_only_files": [
