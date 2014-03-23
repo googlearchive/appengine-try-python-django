@@ -10,4 +10,4 @@ handlers:
 
 libraries:
 - name: django
-  version: "1.5"
+  version: latest
