@@ -10,5 +10,6 @@
   ],
   "read_only_files": [
     "app.yaml"
-  ]
+  ],
+  "download_filename": "appengine-try-python-django.zip"
 }
